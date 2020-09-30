@@ -7,7 +7,7 @@
 //
 
 #include "VegetarianBurgerFactory.hpp"
-
+#include "VegoBurger.hpp"
 #include "Bun.hpp"
 #include "Cheese.hpp"
 #include "Ketchup.hpp"
@@ -17,10 +17,6 @@
 #include "Pickle.hpp"
 #include "Lettuce.hpp"
 #include "Tomato.hpp"
-
-#include "NutritionFact.hpp"
-#include "VegoBurger.hpp"
-
 #include <vector>
 #include <memory>
 #include <iostream>
@@ -29,52 +25,51 @@ namespace burger_program {
 
 std::unique_ptr<Hamburger> VegetarianBurgerFactory::makePlainBurger() const
 {
-    std::vector<std::unique_ptr<Ingredient>> ingredients{};
+    auto vegoBurger{ std::make_unique<VegoBurger>() };
     
-    ingredients.push_back(std::make_unique<Bun>("Sesame bun", 90));
-    ingredients.push_back(std::make_unique<Patty>("Vego Beef", 100));
-    ingredients.push_back(std::make_unique<Onion>("Yellow Onion", 5));
-    ingredients.push_back(std::make_unique<Lettuce>("Iceberg", 34));
-    ingredients.push_back(std::make_unique<Tomato>("Roma", 14));
-    
-    //return std::make_unique<Hamburger>("Vego-Burger", std::move(ingredients));
-    return std::make_unique<VegoBurger>("Vego-Burger");
+    vegoBurger->setProductName("Vego-Burger 90g")
+               .addIngredient(std::make_unique<Bun>("Sesame bun", 45))
+               .addIngredient(std::make_unique<Patty>("Vego Beef", 90))
+               .addIngredient(std::make_unique<Onion>("Yellow Onion", 5))
+               .addIngredient(std::make_unique<Lettuce>("Iceberg", 34))
+               .addIngredient(std::make_unique<Tomato>("Roma", 14));
+
+    return vegoBurger;
 }
 
 
 std::unique_ptr<Hamburger> VegetarianBurgerFactory::makeCheeseBurger() const
 {
-    std::vector<std::unique_ptr<Ingredient>> ingredients{};
-
-    ingredients.push_back(std::make_unique<Bun>("Potato Bun", 90));
-    ingredients.push_back(std::make_unique<Patty>("Vego Beef", 100));
-    ingredients.push_back(std::make_unique<Cheese>("Cheddar Cheese", 30));
-    ingredients.push_back(std::make_unique<Mustard>("Colman's", 10));
-    ingredients.push_back(std::make_unique<Ketchup>("Heinz", 10));
-    ingredients.push_back(std::make_unique<Onion>("Yellow Onion", 10));
-    ingredients.push_back(std::make_unique<Pickle>(7));
+    auto vegoCheese{ std::make_unique<VegoBurger>() };
+    
+    vegoCheese->setProductName("Vego-Cheeseburger")
+               .addIngredient(std::make_unique<Bun>("Potato Bun", 90))
+               .addIngredient(std::make_unique<Patty>("Vego Beef", 100))
+               .addIngredient(std::make_unique<Cheese>("Cheddar Cheese", 30))
+               .addIngredient(std::make_unique<Mustard>("Colman's", 10))
+               .addIngredient(std::make_unique<Ketchup>("Heinz", 10))
+               .addIngredient(std::make_unique<Onion>("Yellow Onion", 10))
+               .addIngredient(std::make_unique<Pickle>(7));
         
-    //return std::make_unique<Hamburger>("Vego-Cheeseburger",std::move(ingredients));
-    return std::make_unique<VegoBurger>("Vego-Cheeseburger");
+    return vegoCheese;
 
 }
 
 
-std::unique_ptr<Hamburger> VegetarianBurgerFactory::makeDoubleExtraBurger() const
+std::unique_ptr<Hamburger> VegetarianBurgerFactory::makeDoubleDeluxeBurger() const
 {
-    std::vector<std::unique_ptr<Ingredient>> ingredients{};
-
-    ingredients.push_back(std::make_unique<Bun>("Full-Grain Bun", 90));
-    ingredients.push_back(std::make_unique<Patty>("Vego Beef", 120));
-    ingredients.push_back(std::make_unique<Cheese>("Cheddar Cheese", 30));
-    ingredients.push_back(std::make_unique<Cheese>("Pepper Jack Cheese", 30));
-    ingredients.push_back(std::make_unique<Onion>("White Onion", 10));
-    ingredients.push_back(std::make_unique<Pickle>(7));
-    ingredients.push_back(std::make_unique<Tomato>("Red Tomatoes", 8));
+    auto vegoDeluxe{ std::make_unique<VegoBurger>() };
     
-    //return std::make_unique<Hamburger>("Double Deluxe", std::move(ingredients));
-    return std::make_unique<VegoBurger>("Vego-Deluxe");
+    vegoDeluxe->setProductName("Vego-Deluxe")
+               .addIngredient(std::make_unique<Bun>("Full-Grain Bun", 90))
+               .addIngredient(std::make_unique<Patty>("Vego Beef", 120))
+               .addIngredient(std::make_unique<Cheese>("Cheddar Cheese", 30))
+               .addIngredient(std::make_unique<Cheese>("Pepper Jack Cheese", 30))
+               .addIngredient(std::make_unique<Onion>("White Onion", 10))
+               .addIngredient(std::make_unique<Pickle>(7))
+               .addIngredient(std::make_unique<Tomato>("Red Tomatoes", 8));
 
+    return vegoDeluxe;
 }
 
 }

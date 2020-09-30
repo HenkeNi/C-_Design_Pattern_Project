@@ -17,9 +17,9 @@ namespace burger_program {
 class VegetarianBurgerFactory : public IBurgerFactory
 {
 public:
-    virtual std::unique_ptr<Hamburger> makePlainBurger()       const override;
-    virtual std::unique_ptr<Hamburger> makeCheeseBurger()      const override;
-    virtual std::unique_ptr<Hamburger> makeDoubleExtraBurger() const override;
+    virtual std::unique_ptr<Hamburger> makePlainBurger()        const override;
+    virtual std::unique_ptr<Hamburger> makeCheeseBurger()       const override;
+    virtual std::unique_ptr<Hamburger> makeDoubleDeluxeBurger() const override;
 };
 
 }
