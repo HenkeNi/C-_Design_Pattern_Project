@@ -20,22 +20,22 @@ namespace burger_program {
 
 class Hamburger : public IFoodItem
 {
-    using ingredientsList_t = std::vector<std::unique_ptr<Ingredient>>; // type alias for vector (array) of smart pointers of type Ingredient
+    using ingredientsList_t = std::vector<std::unique_ptr<Ingredient>>; // type alias
     
 protected:
     std::string m_productName;
-    ingredientsList_t m_ingredients; // array of interfaces (polymorphism) storing an array of interfaces by value would result in object slicing
- 
+    ingredientsList_t m_ingredients; // array of (pointers to) Ingredients - (composition)
+    
 public:
-    Hamburger(const std::string &name)
-        : m_productName{ name }
+    Hamburger()
     {
     }
     
     
+    Hamburger& setProductName(const std::string &name);
     Hamburger& addIngredient(std::unique_ptr<Ingredient> ingredient);
-        
-
+    
+    
     void printIngredients() const;
     friend std::ostream& operator<< (std::ostream &out, const Hamburger &burger);
 };

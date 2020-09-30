@@ -18,6 +18,13 @@ std::ostream& operator<< (std::ostream &out, const Hamburger &burger)
 }
 
 
+Hamburger& Hamburger::setProductName(const std::string &name)
+{
+    m_productName = name;
+    return *this;
+}
+
+
 Hamburger& Hamburger::addIngredient(std::unique_ptr<Ingredient> ingredient)
 {
     m_ingredients.push_back(std::move(ingredient));
