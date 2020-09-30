@@ -18,14 +18,18 @@ std::ostream& operator<< (std::ostream &out, const Hamburger &burger)
 }
 
 
+Hamburger& Hamburger::addIngredient(std::unique_ptr<Ingredient> ingredient)
+{
+    m_ingredients.push_back(std::move(ingredient));
+    return *this;
+}
+
+
 void Hamburger::printIngredients() const
 {
     
 }
 
-void Hamburger::eat() const
-{
-    std::cout << "Nom nom";
-}
+
 
 }
