@@ -12,35 +12,26 @@
 #include "NutritionFact.hpp"
 #include <memory>
 #include <stdio.h>
+#include <string>
 
 namespace burger_program {
 
-// Abstract base class
-class Ingredient // rename FoodItem??
+class Ingredient // rename Produce??
 {
 protected:
-    std::unique_ptr<NutritionFact> m_nutritionFact;
-    int m_productWeightInGrams;
-    //bool m_isVegetarian;
+    std::string m_productName;
+    double m_productVolume;
+    std::string m_unitOfMeasurement;
     
-    // std::string m_productName;
-    // std::string m_productType;
 public:
-    Ingredient(int weight)
-        : m_productWeightInGrams{ weight }
+    Ingredient(const std::string &name, double volume, const std::string &unit)
+        : m_productName{ name }, m_productVolume{ volume }, m_unitOfMeasurement{ unit }
     {
     }
     
-    virtual ~Ingredient() {} // virtual destructor
-    
-    void setNutritionFact(std::unique_ptr<NutritionFact> nutrition);
-    
-    bool getIsVegetarian()        const; 
-    int  getCaloriesInKcal()      const;
-    int  getTotalFatInGram()      const;
-    int  getSodiumInMilligram()   const;
-    int  getCarbohydratesInGram() const;
-    int  getProteinInGram()       const;
+    const  std::string& getProductName()       const { return m_productName;       }
+    const  std::string& getUnitOfMeasurement() const { return m_unitOfMeasurement; }
+    double              getProductVolume()     const { return m_productVolume;     }
 };
 
 }
