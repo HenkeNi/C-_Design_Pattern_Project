@@ -21,8 +21,8 @@ private:
     std::string m_baconType;
     
 public:
-    Bacon(const std::string &type, int weight, bool isVegetarian)
-        : Ingredient{ weight, isVegetarian },m_baconType{ type }
+    Bacon(const std::string &type, int weight)
+        : Ingredient{ weight },m_baconType{ type }
     {
         setIngredientNutrition();
     }

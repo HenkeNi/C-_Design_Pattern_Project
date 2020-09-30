@@ -21,8 +21,8 @@ private:
     std::string m_lettuceSort;
     
 public:
-    Lettuce(const std::string &sort, int weight, bool isVegetarian = true)
-        : Ingredient{ weight, isVegetarian }, m_lettuceSort{ sort }
+    Lettuce(const std::string &sort, int weight)
+        : Ingredient{ weight }, m_lettuceSort{ sort }
     {
         setIngredientNutrition();
     }

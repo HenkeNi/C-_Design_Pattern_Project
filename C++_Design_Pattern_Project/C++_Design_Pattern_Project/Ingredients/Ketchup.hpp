@@ -21,8 +21,8 @@ private:
     std::string m_brand; // interface or class for factory products???
     
 public:
-    Ketchup(const std::string &brand, int weight, bool isVegetarian = true)
-        : Ingredient{ weight, isVegetarian }, m_brand{ brand }
+    Ketchup(const std::string &brand, int weight)
+        : Ingredient{ weight }, m_brand{ brand }
     {
         setIngredientNutrition();
     }

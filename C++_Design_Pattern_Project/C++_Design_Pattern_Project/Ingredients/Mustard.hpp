@@ -21,8 +21,8 @@ private:
     std::string m_brand;
     
 public:
-    Mustard(const std::string &brand, int weight, bool isVegetarian = true)
-        : Ingredient{ weight, isVegetarian }, m_brand{ brand }
+    Mustard(const std::string &brand, int weight)
+        : Ingredient{ weight }, m_brand{ brand }
     {
         setIngredientNutrition();
     }

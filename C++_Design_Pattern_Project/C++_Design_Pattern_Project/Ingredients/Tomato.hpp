@@ -21,8 +21,8 @@ private:
     std::string m_tomatoSort;
     
 public:
-    Tomato(const std::string &sort, int weight, bool isVegetarian = true)
-        : Ingredient{ weight, isVegetarian }, m_tomatoSort{ sort }
+    Tomato(const std::string &sort, int weight)
+        : Ingredient{ weight }, m_tomatoSort{ sort }
     {
         setIngredientNutrition();
     }

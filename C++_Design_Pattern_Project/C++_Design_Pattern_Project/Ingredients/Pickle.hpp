@@ -18,8 +18,8 @@ class Pickle : public Ingredient
 {
   
 public:
-    Pickle(int weight, bool isVegetarian = true)
-        : Ingredient{ weight, isVegetarian }
+    Pickle(int weight)
+        : Ingredient{ weight }
     {
         setIngredientNutrition();
     }

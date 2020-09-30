@@ -21,8 +21,8 @@ private:
     std::string m_cheeseType;
     
 public:
-    Cheese(const std::string &type, int weight, bool isVegetarian)
-        : Ingredient{ weight, isVegetarian }, m_cheeseType{ type }
+    Cheese(const std::string &type, int weight)
+        : Ingredient{ weight }, m_cheeseType{ type }
     {
         setIngredientNutrition();
     }

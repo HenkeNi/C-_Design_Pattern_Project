@@ -21,8 +21,8 @@ private:
     std::string m_pattyType;
     
 public:
-    Patty(const std::string &patty, int weight, bool isVegetarian)
-        : Ingredient{ weight, isVegetarian }, m_pattyType{ patty }
+    Patty(const std::string &patty, int weight)
+        : Ingredient{ weight }, m_pattyType{ patty }
     {
         setIngredientNutrition();
     }

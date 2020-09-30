@@ -21,8 +21,8 @@ private:
     std::string m_onionSort;
 
 public:
-    Onion(const std::string &sort, int weight, bool isVegetarian = true)
-        : Ingredient{ weight, isVegetarian }, m_onionSort{ sort }
+    Onion(const std::string &sort, int weight)
+        : Ingredient{ weight }, m_onionSort{ sort }
     {
         setIngredientNutrition();
     }

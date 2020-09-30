@@ -23,8 +23,8 @@ private:
     std::string m_bunType{};
     
 public:
-    Bun(const std::string &bunType, int weight, bool isVegetarian)
-        : Ingredient{ weight, isVegetarian }, m_bunType{ bunType }
+    Bun(const std::string &bunType, int weight)
+        : Ingredient{ weight }, m_bunType{ bunType }
     {
         setIngredientNutrition();
     }

@@ -15,11 +15,11 @@ void Ingredient::setNutritionFact(std::unique_ptr<NutritionFact> nutrition)
     m_nutritionFact = std::move(nutrition);
 }
 
-
-bool Ingredient::getIsVegetarian() const
-{
-    return m_isVegetarian;
-}
+// TODO: GO THROUGH ALL INGREDIENTS AND CHECK IF VEGETARIAN??
+//bool Ingredient::getIsVegetarian() const
+//{
+//    return m_isVegetarian;
+//}
 
 int Ingredient::getCaloriesInKcal() const
 {

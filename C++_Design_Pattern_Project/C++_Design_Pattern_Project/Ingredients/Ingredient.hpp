@@ -21,11 +21,13 @@ class Ingredient // rename FoodItem??
 protected:
     std::unique_ptr<NutritionFact> m_nutritionFact;
     int m_productWeightInGrams;
-    bool m_isVegetarian;
+    //bool m_isVegetarian;
     
+    // std::string m_productName;
+    // std::string m_productType;
 public:
-    Ingredient(int weight, bool isVegetarian)
-        : m_productWeightInGrams{ weight }, m_isVegetarian{ isVegetarian }
+    Ingredient(int weight)
+        : m_productWeightInGrams{ weight }
     {
     }
     
