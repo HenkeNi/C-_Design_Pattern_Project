@@ -8,15 +8,7 @@
 
 #include "BeefBurgerFactory.hpp"
 #include "BeefBurger.hpp"
-#include "Bun.hpp"
-#include "Cheese.hpp"
-#include "Ketchup.hpp"
-#include "Mustard.hpp"
-#include "Onion.hpp"
-#include "Patty.hpp"
-#include "Pickle.hpp"
-#include "Lettuce.hpp"
-#include "Tomato.hpp"
+#include "NutritionFact.hpp"
 #include <vector>
 #include <memory>
 #include <iostream>
@@ -27,12 +19,14 @@ std::unique_ptr<Hamburger> BeefBurgerFactory::makePlainBurger() const
 {
     auto plainBurger{ std::make_unique<BeefBurger>() };
     
-    plainBurger->setProductName("Hamburger 90g")
-                .addIngredient(std::make_unique<Bun>("Sesame bun", 90))
-                .addIngredient(std::make_unique<Patty>("Ground Beef", 120))
-                .addIngredient(std::make_unique<Ketchup>("Heintz", 5))
-                .addIngredient(std::make_unique<Lettuce>("Iceberg", 34))
-                .addIngredient(std::make_unique<Tomato>("Roma", 14));
+    plainBurger->setBurgerName("Hamburger 90g")
+                .addIngredient("Sesame bun", 90, "g")
+                .addIngredient("Ground Beef", 120, "g")
+                .addIngredient("Heintz", 5, "ml")
+                .addIngredient("Iceberg", 34, "g")
+                .addIngredient("Roma", 14, "g");
+    
+    plainBurger->getNutritionFact().setKcal(357).setCarbohydrates(37.8).setFat(27.8).setSodium(2.6).setProtein(21.7);
     
     return plainBurger;
 }
@@ -42,15 +36,17 @@ std::unique_ptr<Hamburger> BeefBurgerFactory::makeCheeseBurger() const
 {
     auto cheeseburger{ std::make_unique<BeefBurger>() };
     
-    cheeseburger->setProductName("Cheeseburger")
-                 .addIngredient(std::make_unique<Bun>("Potato Bun", 90))
-                 .addIngredient(std::make_unique<Cheese>("Cheddar Cheese", 30))
-                 .addIngredient(std::make_unique<Ketchup>("Heinz", 10))
-                 .addIngredient(std::make_unique<Mustard>("Colman's", 10))
-                 .addIngredient(std::make_unique<Onion>("Yellow Onion", 10))
-                 .addIngredient(std::make_unique<Patty>("Ground Beef", 120))
-                 .addIngredient(std::make_unique<Pickle>(7));
-                
+    cheeseburger->setBurgerName("Cheeseburger")
+                 .addIngredient("Potato Bun", 90, "g")
+                 .addIngredient("Cheddar Cheese", 30, "g")
+                 .addIngredient("Heinz", 10, "ml")
+                 .addIngredient("Colman's", 10, "ml")
+                 .addIngredient("Yellow Onion", 10, "g")
+                 .addIngredient("Ground Beef", 120, "g")
+                 .addIngredient("Pickles", 7, "pcs");
+            
+    cheeseburger->getNutritionFact().setKcal(446).setCarbohydrates(45.2).setFat(32.1).setSodium(3.27).setProtein(27.8);
+
     return cheeseburger;
 }
 
@@ -59,14 +55,17 @@ std::unique_ptr<Hamburger> BeefBurgerFactory::makeDoubleDeluxeBurger() const
 {
     auto deluxeBurger{ std::make_unique<BeefBurger>() };
     
-    deluxeBurger->setProductName("Deluxe Burger")
-                 .addIngredient(std::make_unique<Bun>("Brioche Bun", 90))
-                 .addIngredient(std::make_unique<Patty>("Ground Chuck Steak", 120))
-                 .addIngredient(std::make_unique<Cheese>("Cheddar Cheese", 30))
-                 .addIngredient(std::make_unique<Cheese>("Pepper Jack Cheese", 30))
-                 .addIngredient(std::make_unique<Onion>("White Onion", 10))
-                 .addIngredient(std::make_unique<Tomato>("Red Tomatoes", 8));
+    deluxeBurger->setBurgerName("Deluxe Burger")
+                 .addIngredient("Brioche Bun", 90, "g")
+                 .addIngredient("Ground Chuck Steak", 120, "g")
+                 .addIngredient("Cheddar Cheese", 30, "g")
+                 .addIngredient("Pepper Jack Cheese", 30, "g")
+                 .addIngredient("Mustard", 10, "ml")
+                 .addIngredient("White Onion", 10, "g")
+                 .addIngredient("Red Tomatoes", 8, "g");
 
+    deluxeBurger->getNutritionFact().setKcal(789).setCarbohydrates(43.8).setFat(41.2).setSodium(3.1).setProtein(49.2);
+    
     return deluxeBurger;
 }
 
