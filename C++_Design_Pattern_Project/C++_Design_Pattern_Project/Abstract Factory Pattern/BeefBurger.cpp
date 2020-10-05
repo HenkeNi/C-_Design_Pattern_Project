@@ -11,9 +11,10 @@
 
 namespace burger_program {
 
-void BeefBurger::eat() const
+void BeefBurger::eat() 
 {
-    std::cout << "Nom nom, nice juicy beef";
+    m_isEaten ? std::cout << "You already ate it, remember?" : std::cout << "Nom nom, the " << m_burgerName << " was very nice and juicy";
+    m_isEaten = true;
 }
 
 

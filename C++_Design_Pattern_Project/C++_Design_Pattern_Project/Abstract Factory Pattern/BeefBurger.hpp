@@ -19,15 +19,11 @@ class BeefBurger : public Hamburger
 {
     
 public:
-    BeefBurger(const std::string &name)
-        : Hamburger{ name }
+    BeefBurger()
     {
     }
     
-    
-    virtual void eat() const override;
-    
-    //virtual bool getIsVegetarian() const override { return false; }
+    virtual void eat() override;
 };
 
 }
