@@ -22,8 +22,8 @@ void ShoeAdapter::printIngredients() const
 {
     std::cout << "Shoe contains:\n";
     
-    for (const auto ing : m_shoe->getMaterials())
-        std::cout << "\t* " << ing << '\n';
+    for (const auto &m : m_shoe->getMaterials())
+        std::cout << "\t* " << m << '\n';
 }
 
 

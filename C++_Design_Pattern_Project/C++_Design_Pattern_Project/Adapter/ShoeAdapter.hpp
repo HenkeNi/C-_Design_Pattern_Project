@@ -20,37 +20,26 @@
 
 namespace burger_program {
 
-// Adapter around shoe to make it compatible with other food items...
-class ShoeAdapter : public IFoodItem
+// a wrapper around the Shoe class to make it compatible with IFoodItem (Adapter Pattern)
+class ShoeAdapter : public IFoodItem // ShoeAdapter inherits from IFoodItem (interface)
 {
 private:
-    std::shared_ptr<Shoe> m_shoe; // todo make raw pointer??
-    //std::unique_ptr<Shoe> m_shoe;
-    //Shoe m_shoe;
+    std::shared_ptr<Shoe> m_shoe;  // (shared pointer) NOTE: this member doesn't own this resource (aggregation)
+    //Shoe *m_shoe;
     NutritionFact m_nutrition;
-    //std::unique_ptr<NutritionFact> m_nutrition;
     bool m_isEaten{ false };
     
 public:
     ShoeAdapter(std::shared_ptr<Shoe> shoe)
-        : m_shoe{ shoe }
+        : m_shoe{ shoe } 
     {
-        m_nutrition.setKcal(198).setFat(2).setSodium(0).setProtein(0).setCarbohydrates(4);
+        m_nutrition.setKcal(198).setFat(2).setSodium(0).setProtein(0).setCarbohydrates(4); // set NutritionFact
     }
         
-    //    ShoeAdapter(std::unique_ptr<Shoe> shoe)
-//        : m_shoe{ std::move(shoe) }
-//    {
-//    }
-//    ShoeAdapter(const Shoe &shoe)
-//        : m_shoe{ shoe }
-//    {
-//    }
-    
     void printNutritionFact() const;
-    void printIngredients() const;
-    virtual void eat() override;
+    void printIngredients()   const;
     
+    virtual void eat() override;
 };
 
 
