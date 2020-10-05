@@ -18,16 +18,16 @@ namespace burger_program {
 class Shoe
 {
 private:
-    std::vector<std::string> m_materials;
+    std::vector<std::string> m_materials; // dynamic-array (vector) of strings
     
 public:
     Shoe(const std::vector<std::string> materials)
-        : m_materials{ materials }
+        : m_materials{ materials } // initialize m_materials with materials
     {
     }
     
-    void addMaterial(const std::string& material);
-    const std::vector<std::string>& getMaterials() const { return m_materials; }
+    void addMaterial(const std::string& material); // method for adding new material
+    const std::vector<std::string>& getMaterials() const { return m_materials; } // return m_materials by const reference 
 };
 
 }
