@@ -7,9 +7,22 @@
 //
 
 #include "NutritionFact.hpp"
-
+#include <iostream>
 
 namespace burger_program {
+
+
+std::ostream& operator<< (std::ostream& out, const NutritionFact &f)
+{
+    out << "Nutrition Fact: " 
+        << "\n\tKcal: " << f.m_kcalPerGram
+        << "\n\tCarbs: " << f.m_carbohydratesPerGram
+        << "\n\tFat: " << f.m_totalFatPerGram
+        << "\n\tSalt: " << f.m_sodiumPerGram
+        << "\n\tProtein: " << f.m_proteinPerGram;
+    
+    return out;
+}
 
 NutritionFact& NutritionFact::setKcal(int kcal)
 {
@@ -17,25 +30,25 @@ NutritionFact& NutritionFact::setKcal(int kcal)
     return *this;
 }
 
-NutritionFact& NutritionFact::setFat(int fat)
+NutritionFact& NutritionFact::setFat(double fat)
 {
     m_totalFatPerGram = fat;
     return *this;
 }
 
-NutritionFact& NutritionFact::setSodium(int sodium)
+NutritionFact& NutritionFact::setSodium(double sodium)
 {
     m_sodiumPerGram = sodium;
     return *this;
 }
 
-NutritionFact& NutritionFact::setCarbohydrates(int carbs)
+NutritionFact& NutritionFact::setCarbohydrates(double carbs)
 {
     m_carbohydratesPerGram = carbs;
     return *this;
 }
 
-NutritionFact& NutritionFact::setProtein(int protein)
+NutritionFact& NutritionFact::setProtein(double protein)
 {
     m_proteinPerGram = protein;
     return *this;
