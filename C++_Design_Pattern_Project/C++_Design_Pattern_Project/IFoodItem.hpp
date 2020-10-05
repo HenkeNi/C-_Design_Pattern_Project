@@ -18,7 +18,10 @@ class IFoodItem
 public:
     virtual ~IFoodItem(){}
     
-    virtual void eat() const = 0;
+    virtual void eat() = 0;
+    
+    //virtual void checkNutritionFact() const = 0;
+    //virtual void checkIngredients() const = 0;
 };
 
 }
