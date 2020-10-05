@@ -13,17 +13,23 @@ namespace burger_program {
 
 std::ostream& operator<< (std::ostream &out, const Hamburger &burger)
 {
-    out << burger.m_productName;
+    out << burger.m_burgerName;
     return out;
 }
 
 
-Hamburger& Hamburger::setProductName(const std::string &name)
+Hamburger& Hamburger::setBurgerName(const std::string &name)
 {
-    m_productName = name;
+    m_burgerName = name;
     return *this;
 }
 
+
+Hamburger& Hamburger::addIngredient(const std::string &productName, double volume, const std::string &unit)
+{
+    m_ingredients.push_back(std::make_unique<Ingredient>(productName, volume, unit));
+    return *this;
+}
 
 Hamburger& Hamburger::addIngredient(std::unique_ptr<Ingredient> ingredient)
 {
@@ -32,11 +38,22 @@ Hamburger& Hamburger::addIngredient(std::unique_ptr<Ingredient> ingredient)
 }
 
 
-void Hamburger::printIngredients() const
+void Hamburger::displayIngredients() const
 {
+    if (m_ingredients.size() == 0) // TODO: FIX - make sure its not empty or null...
+        return;
     
+    std::cout << "Ingredients:\n";
+    
+    for (const auto &ingredient : m_ingredients)
+        std::cout << "\t" << *ingredient;
 }
 
+
+void Hamburger::displayNutritionFact() const
+{
+    std::cout << m_nutritionFact << '\n';
+}
 
 
 }

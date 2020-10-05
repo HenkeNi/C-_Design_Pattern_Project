@@ -11,6 +11,7 @@
 
 #include "IFoodItem.hpp"
 #include "Ingredient.hpp"
+#include "NutritionFact.hpp"
 #include <memory>
 #include <stdio.h>
 #include <string>
@@ -23,8 +24,12 @@ class Hamburger : public IFoodItem
     using ingredientsList_t = std::vector<std::unique_ptr<Ingredient>>; // type alias
     
 protected:
-    std::string m_productName;
+    std::string m_burgerName;
     ingredientsList_t m_ingredients; // array of (pointers to) Ingredients - (composition)
+
+    //std::unique_ptr<NutritionFact> m_nutritionFact;
+    NutritionFact m_nutritionFact;
+    bool m_isEaten{ false };
     
 public:
     Hamburger()
@@ -32,11 +37,17 @@ public:
     }
     
     
-    Hamburger& setProductName(const std::string &name);
+    Hamburger& setBurgerName(const std::string &name);
+    Hamburger& setNutritonFact();
+    Hamburger& addIngredient(const std::string &productName, double volume, const std::string &unit);
     Hamburger& addIngredient(std::unique_ptr<Ingredient> ingredient);
     
+    NutritionFact& getNutritionFact() { return m_nutritionFact; }
+    //std::unique_ptr<NutritionFact> setNutritionFact() { return m_nutritionFact; };
     
-    void printIngredients() const;
+    void displayIngredients() const;
+    void displayNutritionFact() const;
+    
     friend std::ostream& operator<< (std::ostream &out, const Hamburger &burger);
 };
 
