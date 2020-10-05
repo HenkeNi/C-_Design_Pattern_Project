@@ -7,9 +7,15 @@
 //
 
 #include "Ingredient.hpp"
+#include <iostream>
 
 namespace burger_program {
 
+std::ostream& operator<< (std::ostream &out, const Ingredient &i)
+{
+    out << i.m_productName << ' ' << i.m_productVolume << i.m_unitOfMeasurement << '\n';
+    return out;
+}
 
 
 }

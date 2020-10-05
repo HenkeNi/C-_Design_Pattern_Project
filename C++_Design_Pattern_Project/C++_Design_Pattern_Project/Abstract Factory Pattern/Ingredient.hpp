@@ -32,6 +32,8 @@ public:
     const  std::string& getProductName()       const { return m_productName;       }
     const  std::string& getUnitOfMeasurement() const { return m_unitOfMeasurement; }
     double              getProductVolume()     const { return m_productVolume;     }
+    
+    friend std::ostream& operator<< (std::ostream &out, const Ingredient &i);
 };
 
 }
