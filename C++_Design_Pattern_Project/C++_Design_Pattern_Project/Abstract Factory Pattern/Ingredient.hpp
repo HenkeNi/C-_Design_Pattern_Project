@@ -16,7 +16,7 @@
 
 namespace burger_program {
 
-class Ingredient // rename Produce??
+class Ingredient // TODO: RENAME COMPONENT??
 {
 protected:
     std::string m_productName;

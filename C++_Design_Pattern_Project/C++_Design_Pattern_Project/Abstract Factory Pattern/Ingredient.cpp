@@ -11,6 +11,7 @@
 
 namespace burger_program {
 
+// overloading of << operator; enables printing of an instance of the class
 std::ostream& operator<< (std::ostream &out, const Ingredient &i)
 {
     out << i.m_productName << ' ' << i.m_productVolume << i.m_unitOfMeasurement << '\n';
