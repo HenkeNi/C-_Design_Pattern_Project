@@ -11,6 +11,7 @@
 
 namespace burger_program {
 
+// what should print when an instance of the class is being printed
 std::ostream& operator<< (std::ostream &out, const Hamburger &burger)
 {
     out << burger.m_burgerName;
@@ -25,8 +26,17 @@ Hamburger& Hamburger::setBurgerName(const std::string &name)
 }
 
 
+Hamburger& Hamburger::setNutritionFact(const NutritionFact &fact)
+{
+    m_nutritionFact = std::move(fact); // steals resource (or moves using move semantics)
+    return *this;
+}
+
+
+
 Hamburger& Hamburger::addIngredient(const std::string &productName, double volume, const std::string &unit)
 {
+    // allocates an instance of Ingredient on the heap and adds the pointer (pointing to the allocated memory) to ingredients array
     m_ingredients.push_back(std::make_unique<Ingredient>(productName, volume, unit));
     return *this;
 }
@@ -40,11 +50,9 @@ Hamburger& Hamburger::addIngredient(std::unique_ptr<Ingredient> ingredient)
 
 void Hamburger::displayIngredients() const
 {
-    if (m_ingredients.size() == 0) // TODO: FIX - make sure its not empty or null...
-        return;
-    
     std::cout << "Ingredients:\n";
     
+    // print out all ingredients
     for (const auto &ingredient : m_ingredients)
         std::cout << "\t" << *ingredient;
 }
