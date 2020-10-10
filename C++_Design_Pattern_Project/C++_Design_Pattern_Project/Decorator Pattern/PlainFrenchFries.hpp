@@ -18,7 +18,7 @@ class PlainFrenchFries : public IFrenchFries
 {
     
 public:
-    virtual void make() const override;
+    virtual void snackOn() const override;
 };
 
 }

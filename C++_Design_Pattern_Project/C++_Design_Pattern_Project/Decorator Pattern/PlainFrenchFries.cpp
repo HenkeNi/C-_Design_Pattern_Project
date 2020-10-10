@@ -11,9 +11,9 @@
 
 namespace burger_program {
 
-void PlainFrenchFries::make() const
+void PlainFrenchFries::snackOn() const
 {
-    std::cout << "Making Fries\n";
+    std::cout << "Nom nom, tasty fries";
 }
 
 
