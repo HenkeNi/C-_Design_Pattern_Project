@@ -10,9 +10,9 @@
 
 namespace burger_program {
 
-void FrenchFriesDecorator::make() const
+void FrenchFriesDecorator::snackOn() const
 {
-    m_decorator.make();
+    m_decorator.snackOn();
 }
 
 }

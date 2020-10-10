@@ -11,10 +11,10 @@
 
 namespace burger_program {
 
-void FrenchFriesWithGravy::make() const
+void FrenchFriesWithGravy::snackOn() const
 {
-    FrenchFriesDecorator::make();
-    std::cout << " + gravy";
+    FrenchFriesDecorator::snackOn();
+    std::cout << ", with gravy";
 }
 
 }
