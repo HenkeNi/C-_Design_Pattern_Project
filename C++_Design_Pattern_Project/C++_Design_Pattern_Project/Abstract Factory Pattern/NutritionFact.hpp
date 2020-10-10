@@ -16,12 +16,12 @@ namespace burger_program {
 
 class NutritionFact
 {
-protected:
-    int m_kcalPerGram;
-    double m_carbohydratesPerGram;
-    double m_totalFatPerGram;
-    double m_sodiumPerGram;
-    double m_proteinPerGram;
+private:
+    int m_totalKcal;
+    double m_totalCarbohydrates;
+    double m_totalFat;
+    double m_totalSodium;
+    double m_totalProtein;
     
 public:
     
@@ -31,11 +31,11 @@ public:
     NutritionFact& setSodium(double sodium);
     NutritionFact& setProtein(double protein);
     
-    int    getKcal()    const { return m_kcalPerGram;          }
-    double getFat()     const { return m_totalFatPerGram;      }
-    double getSodium()  const { return m_sodiumPerGram;        }
-    double getCarbs()   const { return m_carbohydratesPerGram; }
-    double getProtein() const { return m_proteinPerGram;       }
+    int    getKcal()    const { return m_totalKcal;            }
+    double getFat()     const { return m_totalFat;             }
+    double getSodium()  const { return m_totalSodium;          }
+    double getCarbs()   const { return m_totalCarbohydrates;   }
+    double getProtein() const { return m_totalProtein;         }
     
     friend std::ostream& operator<< (std::ostream& out, const NutritionFact &f);
 };
