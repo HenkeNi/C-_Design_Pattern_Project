@@ -8,6 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		20BEF107252266E1002B8F06 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF106252266E1002B8F06 /* main.cpp */; };
+		20BEF11625226964002B8F06 /* Hamburger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF11425226964002B8F06 /* Hamburger.cpp */; };
+		20BEF11C25226AD7002B8F06 /* Ingredient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF11A25226AD7002B8F06 /* Ingredient.cpp */; };
+		20BEF13B25229FBA002B8F06 /* VegetarianBurgerFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF13925229FBA002B8F06 /* VegetarianBurgerFactory.cpp */; };
+		20BEF13E25229FE7002B8F06 /* BeefBurgerFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF13C25229FE7002B8F06 /* BeefBurgerFactory.cpp */; };
+		20BEF1532523E739002B8F06 /* BeefBurger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF1512523E739002B8F06 /* BeefBurger.cpp */; };
+		20BEF1562523E748002B8F06 /* VegoBurger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF1542523E748002B8F06 /* VegoBurger.cpp */; };
+		20BEF1592523EC9C002B8F06 /* IFoodItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF1572523EC9C002B8F06 /* IFoodItem.cpp */; };
+		20BEF1752524BC05002B8F06 /* PlainFrenchFries.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF1732524BC05002B8F06 /* PlainFrenchFries.cpp */; };
+		20BEF17B2524BC4D002B8F06 /* FrenchFriesDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF1792524BC4D002B8F06 /* FrenchFriesDecorator.cpp */; };
+		20BEF17E2524BCA6002B8F06 /* FrenchFriesWithGravy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF17C2524BCA6002B8F06 /* FrenchFriesWithGravy.cpp */; };
+		20BEF1812524BCB4002B8F06 /* FrenchFriesWithCheese.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF17F2524BCB3002B8F06 /* FrenchFriesWithCheese.cpp */; };
+		20BEF1892524C893002B8F06 /* NutritionFact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF1882524C893002B8F06 /* NutritionFact.cpp */; };
+		20BEF18C25253588002B8F06 /* Chef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF18A25253587002B8F06 /* Chef.cpp */; };
+		20BEF1A02528C142002B8F06 /* Shoe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF19E2528C142002B8F06 /* Shoe.cpp */; };
+		20BEF1A32528C16A002B8F06 /* ShoeAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF1A12528C16A002B8F06 /* ShoeAdapter.cpp */; };
+		20BEF1B9252A0D8A002B8F06 /* BurgerProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF1B7252A0D8A002B8F06 /* BurgerProgram.cpp */; };
+		20BEF1C2252B0731002B8F06 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20BEF1C0252B0731002B8F06 /* Button.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +42,44 @@
 /* Begin PBXFileReference section */
 		20BEF103252266E1002B8F06 /* C++_Design_Pattern_Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++_Design_Pattern_Project"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BEF106252266E1002B8F06 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		20BEF1122522692D002B8F06 /* IBurgerFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IBurgerFactory.hpp; sourceTree = "<group>"; };
+		20BEF11425226964002B8F06 /* Hamburger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Hamburger.cpp; sourceTree = "<group>"; };
+		20BEF11525226964002B8F06 /* Hamburger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Hamburger.hpp; sourceTree = "<group>"; };
+		20BEF11825226A33002B8F06 /* NutritionFact.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NutritionFact.hpp; sourceTree = "<group>"; };
+		20BEF11A25226AD7002B8F06 /* Ingredient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ingredient.cpp; sourceTree = "<group>"; };
+		20BEF11B25226AD7002B8F06 /* Ingredient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ingredient.hpp; sourceTree = "<group>"; };
+		20BEF13925229FBA002B8F06 /* VegetarianBurgerFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VegetarianBurgerFactory.cpp; sourceTree = "<group>"; };
+		20BEF13A25229FBA002B8F06 /* VegetarianBurgerFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VegetarianBurgerFactory.hpp; sourceTree = "<group>"; };
+		20BEF13C25229FE7002B8F06 /* BeefBurgerFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BeefBurgerFactory.cpp; sourceTree = "<group>"; };
+		20BEF13D25229FE7002B8F06 /* BeefBurgerFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BeefBurgerFactory.hpp; sourceTree = "<group>"; };
+		20BEF1512523E739002B8F06 /* BeefBurger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BeefBurger.cpp; sourceTree = "<group>"; };
+		20BEF1522523E739002B8F06 /* BeefBurger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BeefBurger.hpp; sourceTree = "<group>"; };
+		20BEF1542523E748002B8F06 /* VegoBurger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VegoBurger.cpp; sourceTree = "<group>"; };
+		20BEF1552523E748002B8F06 /* VegoBurger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VegoBurger.hpp; sourceTree = "<group>"; };
+		20BEF1572523EC9C002B8F06 /* IFoodItem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IFoodItem.cpp; sourceTree = "<group>"; };
+		20BEF1582523EC9C002B8F06 /* IFoodItem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IFoodItem.hpp; sourceTree = "<group>"; };
+		20BEF1732524BC05002B8F06 /* PlainFrenchFries.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlainFrenchFries.cpp; sourceTree = "<group>"; };
+		20BEF1742524BC05002B8F06 /* PlainFrenchFries.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PlainFrenchFries.hpp; sourceTree = "<group>"; };
+		20BEF1772524BC1A002B8F06 /* IFrenchFries.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IFrenchFries.hpp; sourceTree = "<group>"; };
+		20BEF1792524BC4D002B8F06 /* FrenchFriesDecorator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FrenchFriesDecorator.cpp; sourceTree = "<group>"; };
+		20BEF17A2524BC4D002B8F06 /* FrenchFriesDecorator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FrenchFriesDecorator.hpp; sourceTree = "<group>"; };
+		20BEF17C2524BCA6002B8F06 /* FrenchFriesWithGravy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FrenchFriesWithGravy.cpp; sourceTree = "<group>"; };
+		20BEF17D2524BCA6002B8F06 /* FrenchFriesWithGravy.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FrenchFriesWithGravy.hpp; sourceTree = "<group>"; };
+		20BEF17F2524BCB3002B8F06 /* FrenchFriesWithCheese.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FrenchFriesWithCheese.cpp; sourceTree = "<group>"; };
+		20BEF1802524BCB3002B8F06 /* FrenchFriesWithCheese.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FrenchFriesWithCheese.hpp; sourceTree = "<group>"; };
+		20BEF1882524C893002B8F06 /* NutritionFact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NutritionFact.cpp; sourceTree = "<group>"; };
+		20BEF18A25253587002B8F06 /* Chef.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Chef.cpp; sourceTree = "<group>"; };
+		20BEF18B25253588002B8F06 /* Chef.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Chef.hpp; sourceTree = "<group>"; };
+		20BEF1942527D1C1002B8F06 /* IObserver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IObserver.hpp; sourceTree = "<group>"; };
+		20BEF1962527D209002B8F06 /* ISubject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISubject.h; sourceTree = "<group>"; };
+		20BEF19E2528C142002B8F06 /* Shoe.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shoe.cpp; sourceTree = "<group>"; };
+		20BEF19F2528C142002B8F06 /* Shoe.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Shoe.hpp; sourceTree = "<group>"; };
+		20BEF1A12528C16A002B8F06 /* ShoeAdapter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShoeAdapter.cpp; sourceTree = "<group>"; };
+		20BEF1A22528C16A002B8F06 /* ShoeAdapter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ShoeAdapter.hpp; sourceTree = "<group>"; };
+		20BEF1B7252A0D8A002B8F06 /* BurgerProgram.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BurgerProgram.cpp; sourceTree = "<group>"; };
+		20BEF1B8252A0D8A002B8F06 /* BurgerProgram.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BurgerProgram.hpp; sourceTree = "<group>"; };
+		20BEF1C0252B0731002B8F06 /* Button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
+		20BEF1C1252B0731002B8F06 /* Button.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +112,79 @@
 		20BEF105252266E1002B8F06 /* C++_Design_Pattern_Project */ = {
 			isa = PBXGroup;
 			children = (
+				20BEF19D2528C120002B8F06 /* Adapter */,
+				20BEF10D25226709002B8F06 /* Abstract Factory Pattern */,
+				20BEF1692524B2D8002B8F06 /* Decorator Pattern */,
+				20BEF18F252779CD002B8F06 /* Observer Pattern */,
 				20BEF106252266E1002B8F06 /* main.cpp */,
+				20BEF1B7252A0D8A002B8F06 /* BurgerProgram.cpp */,
+				20BEF1B8252A0D8A002B8F06 /* BurgerProgram.hpp */,
+				20BEF1572523EC9C002B8F06 /* IFoodItem.cpp */,
+				20BEF1582523EC9C002B8F06 /* IFoodItem.hpp */,
 			);
 			path = "C++_Design_Pattern_Project";
+			sourceTree = "<group>";
+		};
+		20BEF10D25226709002B8F06 /* Abstract Factory Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				20BEF1122522692D002B8F06 /* IBurgerFactory.hpp */,
+				20BEF13C25229FE7002B8F06 /* BeefBurgerFactory.cpp */,
+				20BEF13D25229FE7002B8F06 /* BeefBurgerFactory.hpp */,
+				20BEF13925229FBA002B8F06 /* VegetarianBurgerFactory.cpp */,
+				20BEF13A25229FBA002B8F06 /* VegetarianBurgerFactory.hpp */,
+				20BEF11425226964002B8F06 /* Hamburger.cpp */,
+				20BEF11525226964002B8F06 /* Hamburger.hpp */,
+				20BEF1512523E739002B8F06 /* BeefBurger.cpp */,
+				20BEF1522523E739002B8F06 /* BeefBurger.hpp */,
+				20BEF1542523E748002B8F06 /* VegoBurger.cpp */,
+				20BEF1552523E748002B8F06 /* VegoBurger.hpp */,
+				20BEF11A25226AD7002B8F06 /* Ingredient.cpp */,
+				20BEF11B25226AD7002B8F06 /* Ingredient.hpp */,
+				20BEF1882524C893002B8F06 /* NutritionFact.cpp */,
+				20BEF11825226A33002B8F06 /* NutritionFact.hpp */,
+			);
+			path = "Abstract Factory Pattern";
+			sourceTree = "<group>";
+		};
+		20BEF1692524B2D8002B8F06 /* Decorator Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				20BEF1772524BC1A002B8F06 /* IFrenchFries.hpp */,
+				20BEF1732524BC05002B8F06 /* PlainFrenchFries.cpp */,
+				20BEF1742524BC05002B8F06 /* PlainFrenchFries.hpp */,
+				20BEF1792524BC4D002B8F06 /* FrenchFriesDecorator.cpp */,
+				20BEF17A2524BC4D002B8F06 /* FrenchFriesDecorator.hpp */,
+				20BEF17C2524BCA6002B8F06 /* FrenchFriesWithGravy.cpp */,
+				20BEF17D2524BCA6002B8F06 /* FrenchFriesWithGravy.hpp */,
+				20BEF17F2524BCB3002B8F06 /* FrenchFriesWithCheese.cpp */,
+				20BEF1802524BCB3002B8F06 /* FrenchFriesWithCheese.hpp */,
+			);
+			path = "Decorator Pattern";
+			sourceTree = "<group>";
+		};
+		20BEF18F252779CD002B8F06 /* Observer Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				20BEF1962527D209002B8F06 /* ISubject.h */,
+				20BEF1942527D1C1002B8F06 /* IObserver.hpp */,
+				20BEF18A25253587002B8F06 /* Chef.cpp */,
+				20BEF18B25253588002B8F06 /* Chef.hpp */,
+				20BEF1C0252B0731002B8F06 /* Button.cpp */,
+				20BEF1C1252B0731002B8F06 /* Button.hpp */,
+			);
+			path = "Observer Pattern";
+			sourceTree = "<group>";
+		};
+		20BEF19D2528C120002B8F06 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				20BEF19E2528C142002B8F06 /* Shoe.cpp */,
+				20BEF19F2528C142002B8F06 /* Shoe.hpp */,
+				20BEF1A12528C16A002B8F06 /* ShoeAdapter.cpp */,
+				20BEF1A22528C16A002B8F06 /* ShoeAdapter.hpp */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +244,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BEF1B9252A0D8A002B8F06 /* BurgerProgram.cpp in Sources */,
+				20BEF1752524BC05002B8F06 /* PlainFrenchFries.cpp in Sources */,
+				20BEF13B25229FBA002B8F06 /* VegetarianBurgerFactory.cpp in Sources */,
+				20BEF18C25253588002B8F06 /* Chef.cpp in Sources */,
+				20BEF1562523E748002B8F06 /* VegoBurger.cpp in Sources */,
+				20BEF17B2524BC4D002B8F06 /* FrenchFriesDecorator.cpp in Sources */,
 				20BEF107252266E1002B8F06 /* main.cpp in Sources */,
+				20BEF1A32528C16A002B8F06 /* ShoeAdapter.cpp in Sources */,
+				20BEF13E25229FE7002B8F06 /* BeefBurgerFactory.cpp in Sources */,
+				20BEF1592523EC9C002B8F06 /* IFoodItem.cpp in Sources */,
+				20BEF1812524BCB4002B8F06 /* FrenchFriesWithCheese.cpp in Sources */,
+				20BEF17E2524BCA6002B8F06 /* FrenchFriesWithGravy.cpp in Sources */,
+				20BEF11C25226AD7002B8F06 /* Ingredient.cpp in Sources */,
+				20BEF1892524C893002B8F06 /* NutritionFact.cpp in Sources */,
+				20BEF11625226964002B8F06 /* Hamburger.cpp in Sources */,
+				20BEF1A02528C142002B8F06 /* Shoe.cpp in Sources */,
+				20BEF1532523E739002B8F06 /* BeefBurger.cpp in Sources */,
+				20BEF1C2252B0731002B8F06 /* Button.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,8 +380,9 @@
 		20BEF10B252266E1002B8F06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B2X526Z7Y9;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -248,6 +391,7 @@
 		20BEF10C252266E1002B8F06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B2X526Z7Y9;
 				ENABLE_HARDENED_RUNTIME = YES;
