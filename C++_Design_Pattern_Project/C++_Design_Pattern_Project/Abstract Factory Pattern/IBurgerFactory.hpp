@@ -14,13 +14,14 @@
 
 namespace burger_program {
 
+// BurgerFactory interface
 class IBurgerFactory
 {
 public:
-    virtual ~IBurgerFactory(){}
-    virtual std::unique_ptr<Hamburger> makePlainBurger()       const = 0;
-    virtual std::unique_ptr<Hamburger> makeCheeseBurger()      const = 0;
-    virtual std::unique_ptr<Hamburger> makeDoubleExtraBurger() const = 0;
+    virtual ~IBurgerFactory(){} // virtual destructor (required)
+    virtual std::unique_ptr<Hamburger> makePlainBurger()        const = 0;
+    virtual std::unique_ptr<Hamburger> makeCheeseBurger()       const = 0;
+    virtual std::unique_ptr<Hamburger> makeDoubleDeluxeBurger() const = 0;
 };
 
 }
