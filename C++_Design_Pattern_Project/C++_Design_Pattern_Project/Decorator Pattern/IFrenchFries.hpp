@@ -13,12 +13,13 @@
 
 namespace burger_program {
 
+// Frenchfries interface
 class IFrenchFries
 {
 public:
     virtual ~IFrenchFries(){}
 
-    virtual void make() const = 0;
+    virtual void snackOn() const = 0;
 };
 
 }
