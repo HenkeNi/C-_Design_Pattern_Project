@@ -18,7 +18,7 @@ namespace burger_program {
 
 class Ingredient // TODO: RENAME COMPONENT??
 {
-protected:
+private:
     std::string m_productName;
     double m_productVolume;
     std::string m_unitOfMeasurement;
