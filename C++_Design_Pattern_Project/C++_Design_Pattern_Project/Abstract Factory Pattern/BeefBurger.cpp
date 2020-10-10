@@ -13,7 +13,8 @@ namespace burger_program {
 
 void BeefBurger::eat() 
 {
-    m_isEaten ? std::cout << "You already ate it, remember?" : std::cout << "Nom nom, the " << m_burgerName << " was very nice and juicy";
+    // if burger is already eaten or not
+    m_isEaten ? std::cout << "You already ate it, remember?" : std::cout << "Nom nom, the " << m_burgerName << " was very nice and juicy\n";
     m_isEaten = true;
 }
 
