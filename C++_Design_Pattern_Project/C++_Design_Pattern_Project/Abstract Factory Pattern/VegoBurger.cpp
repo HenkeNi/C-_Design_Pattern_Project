@@ -13,7 +13,7 @@ namespace burger_program {
 
 void VegoBurger::eat()
 {
-    m_isEaten ? std::cout << "You already ate it, remember?" : std::cout << "Nom nom, this " << m_burgerName << " taste a bit spongy";
+    m_isEaten ? std::cout << "You already ate it, remember?" : std::cout << "Nom nom, this " << m_burgerName << " taste a bit spongy\n";
     m_isEaten = true;
 }
 
