@@ -15,9 +15,10 @@
 
 namespace burger_program {
 
+// Concrete factory that inherits from IBurgerFactory
 class BeefBurgerFactory : public IBurgerFactory
 {
-public:    
+public:
     virtual std::unique_ptr<Hamburger> makePlainBurger()        const override;
     virtual std::unique_ptr<Hamburger> makeCheeseBurger()       const override;
     virtual std::unique_ptr<Hamburger> makeDoubleDeluxeBurger() const override;

@@ -8,15 +8,7 @@
 
 #include "VegetarianBurgerFactory.hpp"
 #include "VegoBurger.hpp"
-#include "Bun.hpp"
-#include "Cheese.hpp"
-#include "Ketchup.hpp"
-#include "Mustard.hpp"
-#include "Onion.hpp"
-#include "Patty.hpp"
-#include "Pickle.hpp"
-#include "Lettuce.hpp"
-#include "Tomato.hpp"
+#include "Ingredient.hpp"
 #include <vector>
 #include <memory>
 #include <iostream>
@@ -25,15 +17,19 @@ namespace burger_program {
 
 std::unique_ptr<Hamburger> VegetarianBurgerFactory::makePlainBurger() const
 {
+    // smart pointer pointing to a VegoBurger class allocated on the heap
     auto vegoBurger{ std::make_unique<VegoBurger>() };
     
-    vegoBurger->setProductName("Vego-Burger 90g")
-               .addIngredient(std::make_unique<Bun>("Sesame bun", 45))
-               .addIngredient(std::make_unique<Patty>("Vego Beef", 90))
-               .addIngredient(std::make_unique<Onion>("Yellow Onion", 5))
-               .addIngredient(std::make_unique<Lettuce>("Iceberg", 34))
-               .addIngredient(std::make_unique<Tomato>("Roma", 14));
+    // add ingredients to burger
+    vegoBurger->setBurgerName("Vego-Burger 90g")
+               .addIngredient("Sesame bun", 45, "g")
+               .addIngredient("Vego Beef", 90, "g")
+               .addIngredient("Yellow Onion", 25, "g")
+               .addIngredient("Iceberg", 34, "g")
+               .addIngredient("Roma", 14, "g");
 
+    // set NutritionFact
+    vegoBurger->setNutritionFact(NutritionFact{}.setKcal(289).setCarbohydrates(31.3).setFat(21.8).setSodium(1.6).setProtein(17.7));
     return vegoBurger;
 }
 
@@ -42,15 +38,16 @@ std::unique_ptr<Hamburger> VegetarianBurgerFactory::makeCheeseBurger() const
 {
     auto vegoCheese{ std::make_unique<VegoBurger>() };
     
-    vegoCheese->setProductName("Vego-Cheeseburger")
-               .addIngredient(std::make_unique<Bun>("Potato Bun", 90))
-               .addIngredient(std::make_unique<Patty>("Vego Beef", 100))
-               .addIngredient(std::make_unique<Cheese>("Cheddar Cheese", 30))
-               .addIngredient(std::make_unique<Mustard>("Colman's", 10))
-               .addIngredient(std::make_unique<Ketchup>("Heinz", 10))
-               .addIngredient(std::make_unique<Onion>("Yellow Onion", 10))
-               .addIngredient(std::make_unique<Pickle>(7));
+    vegoCheese->setBurgerName("Vego-Cheeseburger")
+               .addIngredient("Potato Bun", 90, "g")
+               .addIngredient("Vego Beef", 100, "g")
+               .addIngredient("Cheddar Cheese", 30, "g")
+               .addIngredient("Colman's", 100, "ml")
+               .addIngredient("Heinz", 100, "ml")
+               .addIngredient("Yellow Onion", 3, "slices")
+               .addIngredient("Pickles", 5, "pcs");
         
+    vegoCheese->setNutritionFact(NutritionFact{}.setKcal(312).setCarbohydrates(34.3).setFat(29.8).setSodium(2.4).setProtein(21.4));
     return vegoCheese;
 
 }
@@ -60,15 +57,16 @@ std::unique_ptr<Hamburger> VegetarianBurgerFactory::makeDoubleDeluxeBurger() con
 {
     auto vegoDeluxe{ std::make_unique<VegoBurger>() };
     
-    vegoDeluxe->setProductName("Vego-Deluxe")
-               .addIngredient(std::make_unique<Bun>("Full-Grain Bun", 90))
-               .addIngredient(std::make_unique<Patty>("Vego Beef", 120))
-               .addIngredient(std::make_unique<Cheese>("Cheddar Cheese", 30))
-               .addIngredient(std::make_unique<Cheese>("Pepper Jack Cheese", 30))
-               .addIngredient(std::make_unique<Onion>("White Onion", 10))
-               .addIngredient(std::make_unique<Pickle>(7))
-               .addIngredient(std::make_unique<Tomato>("Red Tomatoes", 8));
+    vegoDeluxe->setBurgerName("Vego-Deluxe")
+               .addIngredient("Full-Grain Bun", 90, "g")
+               .addIngredient("Vego Beef", 120, "g")
+               .addIngredient("Cheddar Cheese", 30, "g")
+               .addIngredient("Pepper Jack Cheese", 30, "g")
+               .addIngredient("White Onion", 10, "g")
+               .addIngredient("Pickles", 6, "pcs")
+               .addIngredient("Red Tomatoes", 8, "slices");
 
+    vegoDeluxe->setNutritionFact(NutritionFact{}.setKcal(428).setCarbohydrates(37.1).setFat(33.4).setSodium(2.8).setProtein(29.4));
     return vegoDeluxe;
 }
 
